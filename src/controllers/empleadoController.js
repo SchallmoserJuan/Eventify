@@ -1,13 +1,13 @@
-const Empleado = require('../models/Empleado');
-const fileManager = require('../utils/fileManager');
+import { getAll, create as _create, getById, update as _update, delete } from '../models/Empleado';
+import { readJSON } from '../utils/fileManager';
 
 const empleadoController = {
     // Mostrar lista de empleados
     async index(req, res) {
         try {
-            const empleados = await Empleado.getAll();
-            const roles = await fileManager.readJSON('roles.json');
-            const areas = await fileManager.readJSON('areas.json');
+            const empleados = await getAll();
+            const roles = await readJSON('roles.json');
+            const areas = await readJSON('areas.json');
             
             res.render('empleados/index', { 
                 titulo: 'Gestión de Empleados',
@@ -23,8 +23,8 @@ const empleadoController = {
     // Mostrar formulario para crear empleado
     async create(req, res) {
         try {
-            const roles = await fileManager.readJSON('roles.json');
-            const areas = await fileManager.readJSON('areas.json');
+            const roles = await readJSON('roles.json');
+            const areas = await readJSON('areas.json');
             
             res.render('empleados/form', {
                 titulo: 'Nuevo Empleado',
@@ -40,7 +40,7 @@ const empleadoController = {
     // Guardar nuevo empleado
     async store(req, res) {
         try {
-            await Empleado.create(req.body);
+            await _create(req.body);
             res.redirect('/empleados');
         } catch (error) {
             res.status(500).send('Error al crear empleado');
@@ -50,9 +50,9 @@ const empleadoController = {
     // Mostrar formulario para editar
     async edit(req, res) {
         try {
-            const empleado = await Empleado.getById(req.params.id);
-            const roles = await fileManager.readJSON('roles.json');
-            const areas = await fileManager.readJSON('areas.json');
+            const empleado = await getById(req.params.id);
+            const roles = await readJSON('roles.json');
+            const areas = await readJSON('areas.json');
             
             if (!empleado) {
                 return res.status(404).send('Empleado no encontrado');
@@ -72,7 +72,7 @@ const empleadoController = {
     // Actualizar empleado
     async update(req, res) {
         try {
-            await Empleado.update(req.params.id, req.body);
+            await _update(req.params.id, req.body);
             res.redirect('/empleados');
         } catch (error) {
             res.status(500).send('Error al actualizar empleado');
@@ -82,7 +82,7 @@ const empleadoController = {
     // Eliminar empleado
     async destroy(req, res) {
         try {
-            await Empleado.delete(req.params.id);
+            await delete(req.params.id);
             res.redirect('/empleados');
         } catch (error) {
             res.status(500).send('Error al eliminar empleado');
@@ -90,4 +90,4 @@ const empleadoController = {
     }
 };
 
-module.exports = empleadoController;
+export default empleadoController;

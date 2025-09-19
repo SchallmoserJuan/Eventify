@@ -1,4 +1,4 @@
-const fileManager = require('../utils/fileManager');
+import { readJSON, writeJSON } from '../utils/fileManager';
 
 class Empleado {
     constructor(id, nombre, email, rolId, areaId, fechaIngreso = new Date()) {
@@ -11,7 +11,7 @@ class Empleado {
     }
 
     static async getAll() {
-        return await fileManager.readJSON('empleados.json');
+        return await readJSON('empleados.json');
     }
 
     static async getById(id) {
@@ -33,7 +33,7 @@ class Empleado {
         );
 
         empleados.push(nuevoEmpleado);
-        await fileManager.writeJSON('empleados.json', empleados);
+        await writeJSON('empleados.json', empleados);
         return nuevoEmpleado;
     }
 
@@ -51,7 +51,7 @@ class Empleado {
             areaId: parseInt(empleadoData.areaId)
         };
 
-        await fileManager.writeJSON('empleados.json', empleados);
+        await writeJSON('empleados.json', empleados);
         return empleados[index];
     }
 
@@ -61,9 +61,9 @@ class Empleado {
         
         if (empleados.length === empleadosFiltrados.length) return false;
         
-        await fileManager.writeJSON('empleados.json', empleadosFiltrados);
+        await writeJSON('empleados.json', empleadosFiltrados);
         return true;
     }
 }
 
-module.exports = Empleado;
+export default Empleado;

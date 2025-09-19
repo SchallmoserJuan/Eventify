@@ -8,6 +8,7 @@
 /* ===== Tipografía y fondo ===== */
 body {
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: clamp(14px, 2vw, 16px);
   background: #eef1f5;
   color: #333;
   line-height: 1.6;
@@ -27,7 +28,7 @@ nav {
 
 nav h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -35,9 +36,9 @@ nav h1 {
 /* ===== Contenido principal ===== */
 main {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1rem auto;
   background: white;
-  padding: 2.5rem;
+  padding: clamp(1rem, 4vw, 2.5rem);
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
@@ -71,11 +72,12 @@ ul li a:hover {
 
 /* ===== Botones reutilizables ===== */
 .btn {
-  padding: 10px 15px;
+  padding: 0.6rem 1rem;
   border-radius: 6px;
   display: inline-block;
   margin: 5px;
   font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* escala según el ancho */
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -112,6 +114,19 @@ table th {
   background: #f1f3f5;
   font-weight: 600;
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* scroll suave en móviles */
+}
+
+.table-responsive table {
+  width: 100%;
+  min-width: 600px; /* evita que las celdas se aplasten demasiado */
+  border-collapse: collapse;
+}
+
 
 /* ===== Formularios ===== */
 form div { margin-bottom: 15px; }
@@ -153,8 +168,8 @@ form button:hover {
 /* ===== Tarjetas de tareas ===== */
 .tareas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .tarea-card {
@@ -183,6 +198,25 @@ form button:hover {
   color: #007bff;
 }
 
+.filtros-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filtros-row div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtros-row select {
+  width: 100%; /* que siempre ocupe todo el ancho disponible */
+  min-width: 180px; /* para que no se achique demasiado */
+  padding: 0.5rem;
+}
+
+
 /* Badges */
 .badge {
   padding: 6px 10px;
@@ -199,20 +233,47 @@ form button:hover {
 .badge-finalizada { background-color: #28a745; color: white; }
 
 
-/* ===== Botón Dark Mode ===== */
-#toggle-dark-mode {
-  background: #ffffff22;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    nav .container {
+        padding: 0 10px;
+    }
+    
+    nav h1 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
 }
 
-#toggle-dark-mode:hover {
-  background: rgba(255,255,255,0.3);
-  transform: translateY(-2px);
+@media (max-width: 600px) {
+  .filtros-row {
+    grid-template-columns: 1fr; /* cada filtro ocupa toda la fila */
+  }
+}
+
+
+@media (max-width: 576px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  .tareas-grid {
+    grid-template-columns: 1fr;
+  }
 }

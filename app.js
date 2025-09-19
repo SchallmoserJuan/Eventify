@@ -29,8 +29,13 @@ app.use((req, res, next) => {
 // Importar rutas
 import empleadoRoutes from "./src/routes/empleadoRoutes.js";
 import tareaRoutes from "./src/routes/tareaRoutes.js";
+import empleadosApiRoutes from "./src/routes/empleadoApiRoutes.js";
+import tareaApiRoutes from "./src/routes/tareaApiRoutes.js";
+
 
 // Usar rutas
+app.use("/api/empleados", empleadosApiRoutes);
+app.use("/api/tareas", tareaApiRoutes);
 app.use("/empleados", empleadoRoutes);
 app.use("/tareas", tareaRoutes);
 

@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-/**
+/*
  * Clase para manejar la lectura y escritura de archivos JSON
  */
 class FileManager {
@@ -31,11 +31,11 @@ class FileManager {
             return JSON.parse(data);
         } catch (error) {
             if (error.code === "ENOENT") {
-                console.log(`📄 Archivo ${filename} no existe, creando archivo vacío...`);
+                console.log(` Archivo ${filename} no existe, creando archivo vacío...`);
                 await this.writeJSON(filename, []);
                 return [];
             }
-            console.error(`❌ Error leyendo ${filename}:`, error.message);
+            console.error(` Error leyendo ${filename}:`, error.message);
             return [];
         }
     }
@@ -44,10 +44,10 @@ class FileManager {
         try {
             const filePath = join(this.dataPath, filename);
             await fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
-            console.log(`✅ Archivo ${filename} actualizado correctamente`);
+            console.log(` Archivo ${filename} actualizado correctamente`);
             return true;
         } catch (error) {
-            console.error(`❌ Error escribiendo ${filename}:`, error.message);
+            console.error(` Error escribiendo ${filename}:`, error.message);
             return false;
         }
     }
@@ -67,10 +67,10 @@ class FileManager {
             const originalPath = join(this.dataPath, filename);
             const backupPath = join(this.dataPath, `${filename}.backup`);
             await fs.copyFile(originalPath, backupPath);
-            console.log(`💾 Backup creado: ${filename}.backup`);
+            console.log(` Backup creado: ${filename}.backup`);
             return true;
         } catch (error) {
-            console.error(`❌ Error creando backup de ${filename}:`, error.message);
+            console.error(` Error creando backup de ${filename}:`, error.message);
             return false;
         }
     }

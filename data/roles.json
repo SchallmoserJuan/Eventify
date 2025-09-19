@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "administrador",
+    "descripcion": "Acceso completo al sistema",
+    "permisos": ["crear", "leer", "actualizar", "eliminar"]
+  },
+  {
+    "id": 2,
+    "nombre": "planner",
+    "descripcion": "Planificador de eventos",
+    "permisos": ["crear", "leer", "actualizar"]
+  },
+  {
+    "id": 3,
+    "nombre": "coordinador",
+    "descripcion": "Coordinador de tareas",
+    "permisos": ["leer", "actualizar"]
+  }
+]

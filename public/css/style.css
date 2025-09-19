@@ -199,50 +199,6 @@ form button:hover {
 .badge-finalizada { background-color: #28a745; color: white; }
 
 
-/* ===== DARK MODE ===== */
-body.dark-mode {
-  background: #121212;
-  color: #e4e6eb;
-}
-
-body.dark-mode nav {
-  background: linear-gradient(90deg, #1f1f1f, #343a40);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-body.dark-mode main {
-  background: #1e1e1e;
-  color: #e4e6eb;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-}
-
-body.dark-mode a,
-body.dark-mode ul li a {
-  background: #343a40;
-  color: #f8f9fa;
-}
-
-body.dark-mode a:hover,
-body.dark-mode ul li a:hover {
-  background: #495057;
-}
-
-body.dark-mode table {
-  background: #1e1e1e;
-  color: #f8f9fa;
-}
-
-body.dark-mode table th {
-  background: #2c2c2c;
-  color: #f1f1f1;
-}
-
-body.dark-mode .tarea-card {
-  background: #2c2c2c;
-  border: 1px solid #444;
-  color: #f8f9fa;
-}
-
 /* ===== Botón Dark Mode ===== */
 #toggle-dark-mode {
   background: #ffffff22;

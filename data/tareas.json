@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "titulo": "testing",
+    "descripcion": "asdasd",
+    "estado": "pendiente",
+    "prioridad": "alta",
+    "fechaInicio": "2025-10-02",
+    "fechaFin": "2025-10-08",
+    "empleadoId": 2,
+    "eventoId": 1,
+    "horasEstimadas": 2,
+    "horasReales": 0,
+    "fechaCreacion": "2025-09-17T14:24:00.129Z"
+  },
+  {
+    "id": 4,
+    "titulo": "asdasd",
+    "descripcion": "fgsdfgfsg",
+    "estado": "pendiente",
+    "prioridad": "alta",
+    "fechaInicio": "2025-09-24",
+    "fechaFin": "2025-10-09",
+    "empleadoId": 1,
+    "eventoId": 1,
+    "horasEstimadas": 1,
+    "horasReales": 0,
+    "fechaCreacion": "2025-09-18T23:08:44.894Z"
+  }
+]

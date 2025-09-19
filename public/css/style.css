@@ -1,0 +1,262 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Tipografía y fondo ===== */
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #eef1f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navegación ===== */
+nav {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== Contenido principal ===== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* ===== Links de inicio ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 1rem 0;
+}
+
+ul li a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+ul li a:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== Botones reutilizables ===== */
+.btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary { background-color: #007bff; color: white; }
+.btn-primary:hover { background-color: #0056b3; }
+
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-secondary:hover { background-color: #545b62; }
+
+.btn-light { background-color: #f8f9fa; color: #212529; border: 1px solid #dee2e6; }
+.btn-light:hover { background-color: #e2e6ea; }
+
+.btn-danger { background-color: #dc3545; color: white; }
+.btn-danger:hover { background-color: #b02a37; }
+
+/* ===== Tablas ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+  padding: 14px;
+  border-bottom: 1px solid #e9ecef;
+  text-align: left;
+}
+
+table th {
+  background: #f1f3f5;
+  font-weight: 600;
+}
+
+/* ===== Formularios ===== */
+form div { margin-bottom: 15px; }
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+form input:focus, form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* ===== Tarjetas de tareas ===== */
+.tareas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.tarea-card {
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarea-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.tarea-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.tarea-header h4 {
+  margin: 0;
+  color: #007bff;
+}
+
+/* Badges */
+.badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-alta { background-color: #dc3545; color: white; }
+.badge-media { background-color: #ffc107; color: #212529; }
+.badge-baja { background-color: #28a745; color: white; }
+.badge-pendiente { background-color: #6c757d; color: white; }
+.badge-en-proceso { background-color: #007bff; color: white; }
+.badge-finalizada { background-color: #28a745; color: white; }
+
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+  background: #121212;
+  color: #e4e6eb;
+}
+
+body.dark-mode nav {
+  background: linear-gradient(90deg, #1f1f1f, #343a40);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+body.dark-mode main {
+  background: #1e1e1e;
+  color: #e4e6eb;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+body.dark-mode a,
+body.dark-mode ul li a {
+  background: #343a40;
+  color: #f8f9fa;
+}
+
+body.dark-mode a:hover,
+body.dark-mode ul li a:hover {
+  background: #495057;
+}
+
+body.dark-mode table {
+  background: #1e1e1e;
+  color: #f8f9fa;
+}
+
+body.dark-mode table th {
+  background: #2c2c2c;
+  color: #f1f1f1;
+}
+
+body.dark-mode .tarea-card {
+  background: #2c2c2c;
+  border: 1px solid #444;
+  color: #f8f9fa;
+}
+
+/* ===== Botón Dark Mode ===== */
+#toggle-dark-mode {
+  background: #ffffff22;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#toggle-dark-mode:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}

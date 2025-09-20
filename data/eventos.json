@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "Conferencia Tech 2024",
+    "lugar": "Centro de Convenciones",
+    "fecha": "2024-06-15",
+    "presupuesto": 50000,
+    "clienteId": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Boda Rodriguez-Perez",
+    "lugar": "Salon El Jardín",
+    "fecha": "2024-07-20",
+    "presupuesto": 25000,
+    "clienteId": 2
+  }
+]

@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": 1,
+    "nombre": "carlos",
+    "email": "carlos@gmail.com",
+    "rolId": 3,
+    "areaId": 2,
+    "fechaIngreso": "2025-09-19T01:19:09.289Z"
+  },
+  {
+    "id": 2,
+    "nombre": "Rodri",
+    "email": "rodri@gmail.com",
+    "rolId": 2,
+    "areaId": 4,
+    "fechaIngreso": "2025-09-19T01:19:41.489Z"
+  }
+]

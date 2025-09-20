@@ -1,4 +1,3 @@
-# Eventify
 #  Eventify - Sistema de Gestión de Eventos
 
 Sistema de gestión integral para empresas de eventos, desarrollado con Node.js, Express y almacenamiento en JSON.
@@ -42,6 +41,7 @@ Eventify es un sistema backend para la gestión de eventos corporativos y social
 - **Control de Versiones**: Git + GitHub
 
 ## Estructura del Proyecto
+```
 eventify/
 ├── src/
 │   ├── controllers/    # Lógica de negocio
@@ -54,3 +54,4 @@ eventify/
 ├── public/             # Archivos estáticos
 ├── docs/               # Documentación
 └── app.js              # Archivo principal
+```

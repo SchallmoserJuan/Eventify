@@ -2,25 +2,21 @@
   {
     "id": 1,
     "nombre": "Producción y Logística",
-    "descripcion": "Coordinación con proveedores, montaje, verificación técnica",
-    "color": "#FF6B6B"
+    "descripcion": "Coordinación con proveedores, montaje, verificación técnica"
   },
   {
     "id": 2,
     "nombre": "Planificación y Finanzas",
-    "descripcion": "Control de presupuesto, contratos, cronogramas",
-    "color": "#4ECDC4"
+    "descripcion": "Control de presupuesto, contratos, cronogramas"
   },
   {
     "id": 3,
     "nombre": "Atención al Cliente",
-    "descripción": "Gestión de clientes y comunicación",
-    "color": "#45B7D1"
+    "descripción": "Gestión de clientes y comunicación"
   },
   {
     "id": 4,
     "nombre": "Administración",
-    "descripcion": "Gestión administrativa general",
-    "color": "#96CEB4"
+    "descripcion": "Gestión administrativa general"
   }
 ]

@@ -1,21 +1,16 @@
 {
   "name": "eventify",
   "version": "1.0.0",
-  "description": "Sistema de gestión integral para empresas de eventos, desarrollado con Node.js, Express y almacenamiento en JSON.",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js",
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SchallmoserJuan/Eventify.git"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "module
   "bugs": {
     "url": "https://github.com/SchallmoserJuan/Eventify/issues"
   },

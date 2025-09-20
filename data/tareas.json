@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "titulo": "tarea1",
+    "descripcion": "primer tarea",
+    "estado": "finalizada",
+    "prioridad": "alta",
+    "fechaInicio": "2025-10-03",
+    "fechaFin": "2025-10-02",
+    "empleadoId": 1,
+    "eventoId": 2,
+    "horasEstimadas": 2,
+    "horasReales": 2,
+    "fechaCreacion": "2025-09-19T01:23:13.498Z"
+  },
+  {
+    "id": 2,
+    "titulo": "asdasd",
+    "descripcion": "asdasd",
+    "estado": "en proceso",
+    "prioridad": "baja",
+    "fechaInicio": "2025-10-04",
+    "fechaFin": "2025-10-10",
+    "empleadoId": 2,
+    "eventoId": 2,
+    "horasEstimadas": 2,
+    "horasReales": 0,
+    "fechaCreacion": "2025-09-19T01:24:24.834Z"
+  }
+]

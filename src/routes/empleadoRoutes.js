@@ -1,23 +1,13 @@
-import { Router } from 'express';
-const router = Router();
-import { index, create, store, edit, update, destroy } from '../controllers/empleadoController';
+import express from "express";
+import empleadoController from "../controllers/empleadoController.js";
 
-// GET /empleados - Listar empleados
-router.get('/', index);
+const router = express.Router();
 
-// GET /empleados/nuevo - Formulario para crear
-router.get('/nuevo', create);
-
-// POST /empleados - Crear empleado
-router.post('/', store);
-
-// GET /empleados/:id/editar - Formulario para editar
-router.get('/:id/editar', edit);
-
-// PUT /empleados/:id - Actualizar empleado
-router.put('/:id', update);
-
-// DELETE /empleados/:id - Eliminar empleado
-router.delete('/:id', destroy);
+router.get("/", empleadoController.index);
+router.get("/nuevo", empleadoController.create);
+router.post("/", empleadoController.store);
+router.get("/:id/editar", empleadoController.edit);
+router.put("/:id", empleadoController.update);
+router.delete("/:id", empleadoController.destroy);
 
 export default router;

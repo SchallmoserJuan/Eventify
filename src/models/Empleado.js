@@ -1,4 +1,4 @@
-import { readJSON, writeJSON } from '../utils/fileManager';
+import fileManager from "../utils/fileManager.js";
 
 class Empleado {
     constructor(id, nombre, email, rolId, areaId, fechaIngreso = new Date()) {
@@ -11,7 +11,7 @@ class Empleado {
     }
 
     static async getAll() {
-        return await readJSON('empleados.json');
+        return await fileManager.readJSON("empleados.json");
     }
 
     static async getById(id) {
@@ -33,7 +33,7 @@ class Empleado {
         );
 
         empleados.push(nuevoEmpleado);
-        await writeJSON('empleados.json', empleados);
+        await fileManager.writeJSON("empleados.json", empleados);
         return nuevoEmpleado;
     }
 
@@ -51,7 +51,7 @@ class Empleado {
             areaId: parseInt(empleadoData.areaId)
         };
 
-        await writeJSON('empleados.json', empleados);
+        await fileManager.writeJSON("empleados.json", empleados);
         return empleados[index];
     }
 
@@ -61,7 +61,7 @@ class Empleado {
         
         if (empleados.length === empleadosFiltrados.length) return false;
         
-        await writeJSON('empleados.json', empleadosFiltrados);
+        await fileManager.writeJSON("empleados.json", empleadosFiltrados);
         return true;
     }
 }

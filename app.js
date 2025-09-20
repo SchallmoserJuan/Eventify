@@ -1,3 +1,4 @@
+
 import express from "express";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
@@ -14,7 +15,6 @@ const PORT = process.env.PORT || 3000;
 app.set("view engine", "pug");
 app.set("views", join(__dirname, "src/views"));
 
-// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, "public")));

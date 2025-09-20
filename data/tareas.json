@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "titulo": "testing",
-    "descripcion": "asdasd",
-    "estado": "pendiente",
+    "titulo": "tarea1",
+    "descripcion": "primer tarea",
+    "estado": "finalizada",
     "prioridad": "alta",
-    "fechaInicio": "2025-10-02",
-    "fechaFin": "2025-10-08",
-    "empleadoId": 2,
-    "eventoId": 1,
+    "fechaInicio": "2025-10-03",
+    "fechaFin": "2025-10-02",
+    "empleadoId": 1,
+    "eventoId": 2,
     "horasEstimadas": 2,
-    "horasReales": 0,
-    "fechaCreacion": "2025-09-17T14:24:00.129Z"
+    "horasReales": 2,
+    "fechaCreacion": "2025-09-19T01:23:13.498Z"
   },
   {
-    "id": 4,
+    "id": 2,
     "titulo": "asdasd",
-    "descripcion": "fgsdfgfsg",
-    "estado": "pendiente",
-    "prioridad": "alta",
-    "fechaInicio": "2025-09-24",
-    "fechaFin": "2025-10-09",
-    "empleadoId": 1,
-    "eventoId": 1,
-    "horasEstimadas": 1,
+    "descripcion": "asdasd",
+    "estado": "en proceso",
+    "prioridad": "baja",
+    "fechaInicio": "2025-10-04",
+    "fechaFin": "2025-10-10",
+    "empleadoId": 2,
+    "eventoId": 2,
+    "horasEstimadas": 2,
     "horasReales": 0,
-    "fechaCreacion": "2025-09-18T23:08:44.894Z"
+    "fechaCreacion": "2025-09-19T01:24:24.834Z"
   }
 ]

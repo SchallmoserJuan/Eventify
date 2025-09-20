@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "nombre": "Conferencia Tech 2024",
+    "nombre": "Conferencia Tech 2025",
     "lugar": "Centro de Convenciones",
-    "fecha": "2024-06-15",
+    "fecha": "2025-06-15",
     "presupuesto": 50000,
     "clienteId": 1
   },
@@ -11,8 +11,16 @@
     "id": 2,
     "nombre": "Boda Rodriguez-Perez",
     "lugar": "Salon El Jardín",
-    "fecha": "2024-07-20",
+    "fecha": "2025-07-20",
     "presupuesto": 25000,
     "clienteId": 2
+  },
+  {
+    "id": 3,
+    "nombre": "Evento deportivo anual",
+    "lugar": "Estadio Nacional",
+    "fecha": "2025-10-05",
+    "presupuesto": 75000,
+    "clienteId": 3
   }
 ]

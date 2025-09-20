@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+  h2 Gestión de Empleados
+  
+  a(href='/empleados/nuevo' class='btn btn-primary') Nuevo Empleado
+  
+  if empleados && empleados.length > 0
+    table
+      thead
+        tr
+          th ID
+          th Nombre
+          th Email
+          th Rol
+          th Área
+          th Acciones
+      tbody
+        each empleado in empleados
+          - const rol = roles.find(r => r.id === empleado.rolId)
+          - const area = areas.find(a => a.id === empleado.areaId)
+          tr
+            td= empleado.id
+            td= empleado.nombre
+            td= empleado.email
+            td= rol ? rol.nombre : 'Sin rol'
+            td= area ? area.nombre : 'Sin área'
+            td
+              a(href=`/empleados/${empleado.id}/editar`) Editar
+              | 
+              form(method='POST' action=`/empleados/${empleado.id}?_method=DELETE` style='display: inline;')
+                button(type='submit' onclick="return confirm('¿Estás seguro?')") Eliminar
+  else
+    p No hay empleados registrados.
+    
+  a(href='/') Volver al inicio

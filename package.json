@@ -10,7 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "module
+  "bugs": {
+    "url": "https://github.com/SchallmoserJuan/Eventify/issues"
+  },
+  "homepage": "https://github.com/SchallmoserJuan/Eventify#readme",
   "dependencies": {
     "express": "^5.1.0",
     "method-override": "^3.0.0",

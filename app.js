@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 3000;
 app.set("view engine", "pug");
 app.set("views", join(__dirname, "src/views"));
 
-// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, "public")));
@@ -46,3 +45,23 @@ app.get("/", (req, res) => {
     mensaje: "Bienvenido al sistema de gestión integral de eventos"
   });
 });
+
+// Middleware de manejo de errores
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('¡Algo salió mal!');
+});
+
+// Middleware para rutas no encontradas
+app.use((req, res) => {
+    res.status(404).render('error', { 
+        titulo: 'Página no encontrada',
+        mensaje: 'La página que buscas no existe'
+    });
+});
+
+app.listen(PORT, () => {
+  console.log(` Servidor Eventify corriendo en http://localhost:${PORT}`);
+});
+
+export default app;

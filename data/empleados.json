@@ -14,5 +14,21 @@
     "rolId": 2,
     "areaId": 4,
     "fechaIngreso": "2025-09-19T01:19:41.489Z"
+  },
+  {
+    "id": 3,
+    "nombre": "nahir",
+    "email": "nahir@gmail.com",
+    "rolId": 1,
+    "areaId": 2,
+    "fechaIngreso": "2025-09-20T21:52:41.220Z"
+  },
+  {
+    "id": 4,
+    "nombre": "Andres",
+    "email": "andres@gmail.com",
+    "rolId": 1,
+    "areaId": 2,
+    "fechaIngreso": "2025-09-26T00:55:49.513Z"
   }
 ]
